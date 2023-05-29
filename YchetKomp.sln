@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YchetKomp", "YchetKomp\YchetKomp.csproj", "{1B83651A-9671-4B43-A719-C94468B2F79E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestYchetKomp", "TestYchetKomp\TestYchetKomp.csproj", "{FEACC8F4-2E13-491F-9223-83AA4FD5CA54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B83651A-9671-4B43-A719-C94468B2F79E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B83651A-9671-4B43-A719-C94468B2F79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B83651A-9671-4B43-A719-C94468B2F79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B83651A-9671-4B43-A719-C94468B2F79E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEACC8F4-2E13-491F-9223-83AA4FD5CA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEACC8F4-2E13-491F-9223-83AA4FD5CA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEACC8F4-2E13-491F-9223-83AA4FD5CA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEACC8F4-2E13-491F-9223-83AA4FD5CA54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {216EE5F6-2004-43A1-8812-819AA38CD04B}
+	EndGlobalSection
+EndGlobal
