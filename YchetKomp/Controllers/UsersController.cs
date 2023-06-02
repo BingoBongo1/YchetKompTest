@@ -74,15 +74,18 @@ namespace YchetKomp.Controllers
         public async Task<IActionResult> DeleteUsers([FromBody]int id)
         {
             var user = await _context.Users.FindAsync(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
             _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
 
-            return NoContent();
+            try
+            {
+                await _context.SaveChangesAsync();
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return NotFound(e.Message);
+            }
         }
 
       

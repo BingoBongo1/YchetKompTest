@@ -54,10 +54,10 @@ namespace YchetKomp.Controllers
         [HttpPost("post")]
         public async Task<ActionResult<Claim>> PostClaim([FromBody]Claim claim)
         {
-            claim.UserIdOpenNavigation = _context.Users.Find(claim.UserIdOpenNavigation.UserId);
-            claim.UserIdCloseNavigation = _context.Users.Find(claim.UserIdOpenNavigation.UserId);
-            claim.Device = _context.Devices.Find(claim.Device.Id);
-            claim.StatusClaim = _context.StatusClaims.Find(claim.StatusClaim.StatusClaimId);
+            claim.UserIdOpenNavigation = _context.Users.Find(claim.UserIdOpen);
+            claim.UserIdCloseNavigation = _context.Users.Find(claim.UserIdClose);
+            claim.Device = _context.Devices.Find(claim.DeviceId);
+            claim.StatusClaim = _context.StatusClaims.Find(claim.StatusClaimId);
 
             claim.UserIdOpenNavigation.Role = _context.Roles.Find(claim.UserIdOpenNavigation.RoleId);
             claim.UserIdCloseNavigation.Role = _context.Roles.Find(claim.UserIdCloseNavigation.RoleId);
@@ -69,7 +69,7 @@ namespace YchetKomp.Controllers
             claim.Device.Cabinet = _context.Cabinets.Find(claim.Device.CabinetId);
             claim.Device.User.Role = _context.Roles.Find(claim.Device.User.RoleId);
             claim.Device.Cabinet.Corps = _context.Corps.Find(claim.Device.Cabinet.CorpsId);
-             
+
 
             _context.Claims.Add(claim);
             await _context.SaveChangesAsync();

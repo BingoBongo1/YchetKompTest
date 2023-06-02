@@ -22,7 +22,7 @@ namespace YchetKomp.Controllers
         }      
 
         [HttpPost("get")]
-        public async Task<ActionResult<IEnumerable<Device>>> GetDevicesPost()
+        public async Task<ActionResult<IEnumerable<Device>>> GetDevices()
         {
 
             return await _context.Devices.Include(s=> s.User.Role).Include(s=>s.Cabinet.Corps).Include(s=>s.Cabinet.Devices)
@@ -49,7 +49,7 @@ namespace YchetKomp.Controllers
         }
 
         [HttpPost("post")]
-        public async Task<ActionResult<Device>> PostDevicePost([FromBody]Device device)
+        public async Task<ActionResult<Device>> PostDevice([FromBody]Device device)
         {
 
             device.Cabinet = _context.Cabinets.Find(device.Cabinet.CabinetId);
