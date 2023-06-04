@@ -69,15 +69,18 @@ namespace YchetKomp.Controllers
         public async Task<IActionResult> DeleteDevices([FromBody]int id)
         {
             var device = await _context.Devices.FindAsync(id);
-            if (device == null)
-            {
-                return NotFound();
-            }
-
             _context.Devices.Remove(device);
-            await _context.SaveChangesAsync();
 
-            return NoContent();
+            try
+            {
+                await _context.SaveChangesAsync();
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return NotFound(e.Message);
+            }
         }
     }
 }

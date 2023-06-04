@@ -81,6 +81,7 @@ namespace TestYchetKomp.Controllers.Tests
             Assert.IsInstanceOfType(result, typeof(OkResult));
            
         }
+
         //интеграционные тесты
 
         [TestMethod()]

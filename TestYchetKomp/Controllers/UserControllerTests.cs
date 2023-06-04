@@ -91,6 +91,7 @@ namespace TestYchetKomp.Controllers.Tests
         }
 
         //интеграционные тесты
+
         [TestMethod()]
         public async Task GetUsersPostIntTest()
         {
