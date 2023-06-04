@@ -75,6 +75,14 @@ namespace TestYchetKomp.Controllers.Tests
         //интеграционные тесты 
 
         [TestMethod()]
+        public async Task GetDevicesPostIntTest()
+        {
+            var response = await client.PostAsync("/api/Devices/get", null);
+            response.EnsureSuccessStatusCode();
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+        }
+
+        [TestMethod()]
         public async Task DeleteDevicesPostIntTest()
         {
             _context.Devices.Add(device);
